@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/application/application",
+    "pages/login/login",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f8f8f1",
+    "navigationBarTitleText": "信北A404会议室预约",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}
