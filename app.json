@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/application/application",
+    "pages/schedule/schedule",
     "pages/login/login",
     "pages/index/index",
     "pages/logs/logs"
