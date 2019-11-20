@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/applylist/applylist",
     "pages/application/application",
     "pages/index/index",
     "pages/schedule/schedule",
-    "pages/login/login",
     "pages/logs/logs"
   ],
   "window": {

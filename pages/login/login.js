@@ -1,66 +1,61 @@
-// pages/login/login.js
+// pages/index2/index2.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+    id: " ",
+    passward: " "
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+/*获取输入的学号 */
+  getId : function(e){
+    this.setData({
+      id: e.detail.value
+    })
+   
+    console.log("id:" + this.data.id)
 
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+/*获取输入的密码 */
+  getPassward: function(e){
+    this.setData({
+      passward: e.detail.value
+    })
+   
+    console.log("passward:" + this.data.passward)
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  userSubmit: function(){
+   var userId = this.data.id
+   console.log(userId)
+   var userPwd = this.data.passward
+   console.log(userPwd)
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  adminSubmit: function(){
+    var that = this;
+    wx.request({
+      url: 'xxxxxxxxxxxxxxx', /*提交地址？？？ */
+      data: {
+        /*token: '7b40b56eb2e27195dfcdcc3322312a4eb67229a000000015ea84b8657',*/
+        adminId:this.data.id,
+        adminPwd: this.data.passward
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        that.successRemind();
+      }
+    })
+   
   }
 })
