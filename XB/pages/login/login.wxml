@@ -1,14 +1,29 @@
-<!--pages/login/login.wxml-->
 
- <image class="bgImg" src="/pages/image/pic1.png"></image> 
+<image class="bgImg" src="/pages/image/pic1.png"></image> 
   <view class="login">
-     <canvas  style= "widhth: 150px; height:500px;" canvas-id="firstCanvas"></canvas>
-     <view>
-     <page></page>
-     <input ></input>
-     
-     </view>
-   
-  
+
+    <view class="ipt" >
+      <label >学号</label>
+      <view class="line"> </view>
+      <input  maxlength="11" type="number" style="margin-top:8rpx; font-size:35rpx;" bindinput="getId"/>
+    </view>
+
+    <view class="ipt" >
+      <label >密码</label>
+       <view class="line"> </view>
+      <input type="text"  password="true"   bindinput="getPassward"/>
+    </view>
+
+    <view >
+      <text style="font-style:normal; font-size:12px; margin-left:20px;margin-top:5px;">· 请使用OUC教务处密码登录</text>
+    </view>
+
+    <view style="display: flex;">
+      <button class="btn"   bindtap="userSubmit">确定 </button>
+      <button class="btn" bindtap="adminSubmit"> 管理员登录</button>
+    </view>
+
   </view>
+
+  <image class="xhImg" src="/pages/image/pic2.png" mode="aspectFit"></image>
 
