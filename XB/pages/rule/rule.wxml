@@ -1,0 +1,18 @@
+<!--pages/rule/rule.wxml-->
+<view class="bj">
+   <scroll-view  scroll-y="true" class="rule">
+      <text decode="{{true}}">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为进一步规范和完善信息科学与工程学院北楼A404会议室使用管理，特制定本办法。\n</text>
+      <text>一、使用原则\n</text>
+      <text decode="{{true}}">&nbsp;&nbsp;（一）会议室对信息科学与工程学院全体师生开放使用。\n </text>
+      <text decode="{{true}}">&nbsp;&nbsp;（二）会议室仅作为学术交流之用，为专家讲座、同学们交流讨论提供所需场所。\n</text>
+      <text decode="{{true}}">二、使用程序\n</text>
+      <text decode="{{true}}">&nbsp;&nbsp;（一）院校级会议及接待活动，由党委校长办公室统一安排。\n</text>
+      <text decode="{{true}}">&nbsp;&nbsp;（二）学生申请会议室使用，须至少提前24小时在本平台提交使用申请，并在管理员审核通过后，在申请时间至信院团委办公室领取会议室钥匙。并在使用结束后及时归还。\n</text>
+      <text>三、服务和收费\n</text>
+      <text decode="{{true}}">&nbsp;&nbsp;（一）信北A404包含一般会议所需设备(场地，桌牌，多媒体，音响话简)及茶水等基本设施。如有其他需要(如水果、鲜花、矿泉水等)，请自行安排，费用自理。\n</text>
+      <text decode="{{true}}">&nbsp;&nbsp;（二）信北A404会议室使用不收取任何费用。\n </text>
+      <text decode="{{true}}">&nbsp;&nbsp;（三）与会人员应自觉维护会议厅的设施和卫生，对造成设备、物品损坏丢失的，应照价赔偿。   \n</text>
+      <button class="btn" bindtap="qd">确定</button>
+   </scroll-view>
+</view>
+

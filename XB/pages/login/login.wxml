@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+
+ <image class="bgImg" src="/pages/image/pic1.png"></image> 
+  <view class="login">
+     <canvas  style= "widhth: 150px; height:500px;" canvas-id="firstCanvas"></canvas>
+     <view>
+     <page></page>
+     <input ></input>
+     
+     </view>
+   
+  
+  </view>
+
