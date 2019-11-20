@@ -99,19 +99,8 @@ page {
   width: 100%;
   height: 18px;
   background: rgba(206, 234, 228, 0.7);
+  margin-bottom: 2px;
 }
-
-.schedule .wrapper .main .col .cell:nth-child(even) {
-  margin-bottom: 3px;
-  /* background: red; */
-}
-
-.schedule .wrapper .main .col .cell:nth-child(odd) {
-  margin-bottom: 1px;
-  /* background: green; */
-}
-
-
 
 .schedule .wrapper .main .col .cell.occupied {
   background: #efce92;
@@ -129,28 +118,5 @@ page {
 .schedule .wrapper .main .col .cell.occupied,
 .schedule .wrapper .main .col .cell.selected {
   margin-bottom: 0;
-}
-
-.schedule .wrapper .main .col .cell:nth-child(even).occupied,
-.schedule .wrapper .main .col .cell:nth-child(even).confirmed,
-.schedule .wrapper .main .col .cell:nth-child(even).selected {
-  height: 21px;
-}
-
-.schedule .wrapper .main .col .cell:nth-child(odd).occupied,
-.schedule .wrapper .main .col .cell:nth-child(odd).confirmed,
-.schedule .wrapper .main .col .cell:nth-child(odd).selected {
-  height: 19px;
-}
-
-.schedule .wrapper .main .col .cell:nth-child(even).occupied:last-of-type,
-.schedule .wrapper .main .col .cell:nth-child(even).confirmed:last-of-type {
-  height: 18px;
-  margin-bottom: 3px;
-}
-
-.schedule .wrapper .main .col .cell:nth-child(odd).occupied:last-of-type,
-.schedule .wrapper .main .col .cell:nth-child(odd).confirmed:last-of-type {
-  height: 18px;
-  margin-bottom: 1px;
+  height: 20px;
 }

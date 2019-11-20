@@ -1,6 +1,6 @@
 <!--pages/application/application.wxml-->
 <image class="top-img" src="img/bg.png" mode="widthFix"></image>
-<form class="application-form">
+<form class="application-form" bindsubmit="submitApplication">
   <view class="form-group">
     <label for="UID">申请人学号</label>
     <input id="UID" name="UID" placeholder="请输入申请人学号" placeholder-class="placeholder"></input>
@@ -23,9 +23,9 @@
   </view>
   <view class="form-group">
     <label for="media">使用多媒体</label>
-    <radio-group id="media">
-      <radio>是</radio>
-      <radio>否</radio>
+    <radio-group id="media" name="media">
+      <radio value="是" checked="true">是</radio>
+      <radio value="否">否</radio>
     </radio-group>
   </view>
   <view class="form-group reason">

@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/applylist/applylist",
     "pages/application/application",
+    "pages/index/index",
     "pages/schedule/schedule",
     "pages/login/login",
-    "pages/index/index",
     "pages/logs/logs"
   ],
   "window": {
@@ -12,5 +13,22 @@
     "navigationBarTitleText": "信北A404会议室预约",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "custom": false,
+    "color": "#FFFFFF",
+    "selectedColor": "#FFFFFF",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "usingComponents": {}
 }

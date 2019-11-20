@@ -14,6 +14,20 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const alert = msg => {
+  wx.showModal({
+    title: "提示",
+    content: msg,
+    showCancel: false,
+  })
+}
+
+const isEmpty = data => {
+  return (typeof data == "undefined" || data == null || data == "");
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  alert: alert,
+  isEmpty: isEmpty,
 }
