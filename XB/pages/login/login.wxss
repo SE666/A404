@@ -1,0 +1,14 @@
+/* pages/login/login.wxss */
+.bgImg{
+  position:fixed; 
+  height: 185px;
+  width:335px;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+/*.login{
+ margin-left: 45px;
+ margin-top: 150px;
+ 
+}*/

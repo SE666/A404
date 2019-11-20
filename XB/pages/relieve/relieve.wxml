@@ -1,0 +1,10 @@
+<!--pages/relieve/relieve.wxml-->
+<view>
+    <view>
+       <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+       <view class="name">{{userInfo.nickName}}</view>
+    </view>
+ 
+
+
+</view>

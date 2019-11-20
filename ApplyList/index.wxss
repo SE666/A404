@@ -1,0 +1,79 @@
+/**index.wxss**/
+#body{
+  width: 750rpx;
+  height: 100%x;
+  background-color: #f7f7f2;
+  margin: 0px;
+  padding: 0px;
+  /* position: relative; */
+}
+#header{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 700rpx;
+  height: 45px;
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  /* position: absolute; */
+  top: 10px;
+}
+.inputText{
+  width: 90rpx;
+  height: 10px;
+  background-color: white;
+  border-radius: 2px;
+}
+#search{
+  width: 120rpx;
+  height: 20px;
+  line-height: 20px;
+  background-color:#00a0b4;
+  justify-content: center;
+  font-size: 15px;
+  text-align: center;
+  margin: 0px;
+}
+#search text{
+  vertical-align:middle;
+  display: table-cell;
+}
+#content{
+  width: 750rpx;
+margin: 0 auto;
+
+/* position: absolute; */
+top: 10;
+}
+.list{
+width: 650rpx;
+height: 70px;
+border-radius: 2px;
+font-size: 14px;
+font-weight: bold;
+background-color:#eee;
+margin: 0 auto;
+margin-top:3px;
+margin-bottom: 10rpx;
+position: relative;
+}
+#cancel{
+  width: 120rpx;
+  height: 40rpx;
+  line-height: 20px;
+  background-color: #00a0b4;
+  justify-content: center;
+  font-size: 15px;
+  text-align: center;
+  /* right: px; */
+  margin: 0px;
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+}
+#cancel text{
+  vertical-align:middle;
+  display: table-cell;
+  font-weight: normal;
+}
