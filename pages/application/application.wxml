@@ -1,5 +1,5 @@
 <!--pages/application/application.wxml-->
-<image class="top-img" src="img/bg.png" mode="widthFix"></image>
+<image class="top-img" src="/image/bg.png" mode="widthFix"></image>
 <form class="application-form" bindsubmit="submitApplication">
   <view class="form-group">
     <label for="UID">申请人学号</label>

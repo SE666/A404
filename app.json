@@ -1,10 +1,13 @@
 {
   "pages": [
-    "pages/login/login",
     "pages/applylist/applylist",
-    "pages/application/application",
-    "pages/index/index",
     "pages/schedule/schedule",
+    "pages/application/application",
+    "pages/register/register",
+    "pages/login/login",
+    "pages/rule/rule",
+    "pages/personalcenter/personalcenter",
+    "pages/index/index",
     "pages/logs/logs"
   ],
   "window": {
@@ -15,17 +18,19 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "custom": false,
-    "color": "#FFFFFF",
-    "selectedColor": "#FFFFFF",
-    "backgroundColor": "#000000",
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
     "list": [
       {
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/home_.png",
         "pagePath": "pages/index/index",
         "text": "首页"
       },
       {
-        "pagePath": "pages/index/index",
+        "iconPath": "image/person.png",
+        "selectedIconPath": "image/person_.png",
+        "pagePath": "pages/personalcenter/personalcenter",
         "text": "个人中心"
       }
     ]

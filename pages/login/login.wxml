@@ -1,5 +1,5 @@
 
-<image class="bgImg" src="/pages/image/pic1.png"></image> 
+<image class="bgImg" src="/image/pic1.png"></image> 
   <view class="login">
 
     <view class="ipt" >
@@ -25,5 +25,5 @@
 
   </view>
 
-  <image class="xhImg" src="/pages/image/pic2.png" mode="aspectFit"></image>
+  <image class="xhImg" src="/image/pic2.png" mode="aspectFit"></image>
 

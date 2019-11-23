@@ -1,4 +1,1 @@
 /* pages/index/index.wxss */
-page {
-  background: #f8f8f1;
-}
