@@ -1,2 +1,14 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view class="wrapper">
+  <view class="condition">
+    会议室使用情况
+  </view>
+  <view class="right">
+    <view class="apply">
+      A404会议室预约
+    </view>
+    <view class="my">
+      查看已提交申请
+    </view>  
+  </view>
+</view>
