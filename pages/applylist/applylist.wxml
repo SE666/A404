@@ -1,38 +1,46 @@
 <!--index.wxml-->
-<view id="body">
-  <view id="header">
-    <input type="text" class = "inputText"></input>
-    <text space ="ensp"> 年 </text>
-    <input type="text" class = "inputText"></input>
-    <text space = "ensp"> 月 </text>
-    <input type="text" class = "inputText"></input>
-    <text space = "ensp"> 日  </text>
-    <button id="search" style="color:white"><text>搜索</text></button>
+<view id="header">
+  <input type="text" class="inputText"></input>
+  <text space="ensp"> 年 </text>
+  <input type="text" class="inputText"></input>
+  <text space="ensp"> 月 </text>
+  <input type="text" class="inputText"></input>
+  <text space="ensp"> 日  </text>
+  <button id="search" style="color:white">
+    <text>搜索</text>
+  </button>
+</view>
+<view id="content">
+  <view class="list" wx:for="{{applylist}}">
+    <text space="ensp"> 申请使用：{{item.applydate}} {{item.start}}-{{item.end}}\n</text>
+    <text space="ensp">   状态：{{item.status}}\n</text>
+    <text space="ensp"> 提交日期：{{item.submitdatetime}}</text>
+    <button id="cancel" style="color:white">
+      <text>撤销</text>
+    </button>
   </view>
-  <view id = "content">
-    <view class="list">
-      <text space = "ensp"> 申请使用：2019年10月16日 16:00-18:00\n</text>
-      <text space = "ensp">   状态：待审核\n</text>
-      <text space = "ensp"> 提交日期：2019年10月12日</text>  
-      <button id = "cancel" style="color:white"><text>撤销</text></button>
-    </view>
-    <view class="list">
-      <text space = "ensp"> 申请使用：2019年10月16日 16:00-18:00\n</text>
-      <text space = "ensp">   状态：待审核\n</text>
-      <text space = "ensp"> 提交日期：2019年10月12日</text>  
-      <button id = "cancel" style="color:white"><text>撤销</text></button>
-    </view>
-    <view class="list">
-      <text space = "ensp"> 申请使用：2019年10月16日 16:00-18:00\n</text>
-      <text space = "ensp">   状态：待审核\n</text>
-      <text space = "ensp"> 提交日期：2019年10月12日</text>  
-      <button id = "cancel" style="color:white"><text>撤销</text></button>
-    </view>
-    <view class="list">
-      <text space = "ensp"> 申请使用：2019年10月16日 16:00-18:00\n</text>
-      <text space = "ensp">   状态：待审核\n</text>
-      <text space = "ensp"> 提交日期：2019年10月12日</text>  
-      <button id = "cancel" style="color:white"><text>撤销</text></button>
-    </view>
+  <!-- <view class="list">
+    <text space="ensp"> 申请使用：2019年10月16日 16:00-18:00\n</text>
+    <text space="ensp">   状态：待审核\n</text>
+    <text space="ensp"> 提交日期：2019年10月12日</text>
+    <button id="cancel" style="color:white">
+      <text>撤销</text>
+    </button>
   </view>
+  <view class="list">
+    <text space="ensp"> 申请使用：2019年10月16日 16:00-18:00\n</text>
+    <text space="ensp">   状态：待审核\n</text>
+    <text space="ensp"> 提交日期：2019年10月12日</text>
+    <button id="cancel" style="color:white">
+      <text>撤销</text>
+    </button>
+  </view>
+  <view class="list">
+    <text space="ensp"> 申请使用：2019年10月16日 16:00-18:00\n</text>
+    <text space="ensp">   状态：待审核\n</text>
+    <text space="ensp"> 提交日期：2019年10月12日</text>
+    <button id="cancel" style="color:white">
+      <text>撤销</text>
+    </button>
+  </view> -->
 </view>
