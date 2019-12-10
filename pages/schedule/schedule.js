@@ -1,9 +1,4 @@
 // pages/schedule/schedule.js
-class Cell {
-  constructor(cls) {
-    this.cls = cls;
-  }
-}
 Page({
 
   /**
@@ -67,9 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  select: function(e) {
-    console.log(e.currentTarget);
   }
 })

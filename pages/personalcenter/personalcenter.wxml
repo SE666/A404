@@ -9,12 +9,12 @@
   </view>
   <view class="list">
     <view class="item"> 
-      <image src="/image/leave.png" mode = "aspectFit" class="img"></image>
+      <image src="/pages/image/leave.png" mode = "aspectFit" class="img"></image>
       <text>解除绑定</text>
     </view>
     <view class="line"></view>
     <view class="item">
-      <image src="/image/thank.png" mode = "aspectFit" class="img"></image>
+      <image src="/pages/image/thank.png" mode = "aspectFit" class="img"></image>
       <text>致谢与说明</text>
     </view>
     <view class="line"></view>

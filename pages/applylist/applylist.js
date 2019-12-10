@@ -1,14 +1,58 @@
 //index.js
 //获取应用实例
 const app = getApp()
-var json = '[{"id":1,"stuid":"17020031068","username":"汪wqs","phone":"17852417737","applydate":"2019-10-31","start":"08:10","end":"09:10","number":5,"ifmedia":"否","reason":"****","status":"待审核","submitdatetime":"2019-10-31 08:11:15"},{"id":2,"stuid":"17020031068","username":"汪wqs","phone":"17852417737","applydate":"2019-10-31","start":"09:45","end":"10:45","number":7,"ifmedia":"是","reason":"####","status":"审核通过","submitdatetime":"2019-10-31 08:22:40"}]';
 
 Page({
   data: {
-    applylist: []
+    motto: 'Hello World',
+    userInfo: {},
+    hasUserInfo: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    btntext:"请仔细阅读协议",
+    mycount:10,
+    able:"",
+    timer: '',//定时器名字
+    countDownNum: '60',//倒计时初始值
+    id: 0,
   },
   onLoad: function () {
-    var that = this;
-    this.setData({applylist: JSON.parse(json)});
+    
+    // CountDown();
+    // setInterval(that.bindViewTap, 1000);
+
+    if (app.globalData.userInfo) {
+      this.setData({
+        userInfo: app.globalData.userInfo,
+        hasUserInfo: true
+      })
+    } else if (this.data.canIUse){
+      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+      // 所以此处加入 callback 以防止这种情况
+      app.userInfoReadyCallback = res => {
+        this.setData({
+          userInfo: res.userInfo,
+          hasUserInfo: true
+        })
+      }
+    } else {
+      // 在没有 open-type=getUserInfo 版本的兼容处理
+      wx.getUserInfo({
+        success: res => {
+          app.globalData.userInfo = res.userInfo
+          this.setData({
+            userInfo: res.userInfo,
+            hasUserInfo: true
+          })
+        }
+      })
+    }
+  },
+ getUserInfo: function(e) {
+    console.log(e)
+    app.globalData.userInfo = e.detail.userInfo
+    this.setData({
+      userInfo: e.detail.userInfo,
+      hasUserInfo: true
+    })
   }
 })

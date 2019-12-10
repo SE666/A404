@@ -43,8 +43,8 @@
     </view>
     <view class="main">
       <view class="col">
-        <view class="cell {{xxx}}" bindtap="select" data-xxx="jjlkl"></view>
-        <view class="cell" bindtap="select"></view>
+        <view class="cell"></view>
+        <view class="cell"></view>
         <view class="cell"></view>
         <view class="cell"></view>
         <view class="cell"></view>

@@ -1,8 +1,12 @@
 /**index.wxss**/
-page{
-  background-color: #f8f8f1;
+#body{
+  width: 750rpx;
+  height: 100%x;
+  background-color: #f7f7f2;
+  margin: 0px;
+  padding: 0px;
+  /* position: relative; */
 }
-
 #header{
   display: flex;
   flex-direction: row;
