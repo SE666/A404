@@ -5,14 +5,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    schedule:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var array = new Array(7);
+    for(let i = 0; i < 7; i++) {
+      array[i] = new Array(30);
+      for(let j = 0; j < 30; j++) {
+        array[i][j] = "test";
+      }
+    }
+    this.setData({schedule: array});
   },
 
   /**

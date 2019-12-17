@@ -1,13 +1,13 @@
 {
   "pages": [
-    "pages/applylist/applylist",
     "pages/schedule/schedule",
+    "pages/index/index",
+    "pages/applylist/applylist",
     "pages/application/application",
     "pages/register/register",
     "pages/login/login",
     "pages/rule/rule",
     "pages/personalcenter/personalcenter",
-    "pages/index/index",
     "pages/logs/logs"
   ],
   "window": {

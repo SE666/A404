@@ -34,3 +34,7 @@ page {
   flex-basis: 43.5%;
   background: #a2e8cc;
 }
+
+.condition, .apply, .my {
+  box-shadow: 5px 5px 5px #999;
+}
