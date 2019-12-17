@@ -176,7 +176,7 @@ public class AdminDao {
 	}
 	
 	// 修改申请状态
-	public int ChangeStatus(int id, String status){
+	public int ChangeStatus(int formid, String status){
 		Connection connection = DBUtil.getConn();
 		String sql = "update form set binary status=? where id=?";
 		PreparedStatement preparedStatement = null;
@@ -184,7 +184,7 @@ public class AdminDao {
 		try {
 			preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, status);
-			preparedStatement.setInt(2, id);
+			preparedStatement.setInt(2, formid);
 			result = preparedStatement.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

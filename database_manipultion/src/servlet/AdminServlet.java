@@ -34,11 +34,14 @@ public class AdminServlet extends HttpServlet {
     
     // 管理员登录
     protected void Login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	String stuid = request.getParameter("stuid");
-    	String password = request.getParameter("password");
+//    	String stuid = request.getParameter("stuid");
+//    	String password = request.getParameter("password");
+    	String stuid = "0";
+    	String password = "123";
     	int flag = adminService.IfAccount(stuid, password);
     	Gson gson = new Gson();
     	String viewToJson = gson.toJson(flag);
+    	System.out.println(viewToJson);
     	
     	//返回请求
     	PrintWriter out = response.getWriter();
@@ -87,7 +90,7 @@ public class AdminServlet extends HttpServlet {
     
     // 修改申请状态
     protected void ChangeStatus(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	String idStr = request.getParameter("id");
+    	String idStr = request.getParameter("formid");
     	int id = Integer.parseInt(idStr);
     	String status = request.getParameter("status");
     	String result = adminService.ChangeStatus(id, status);
