@@ -96,8 +96,8 @@ page {
 }
 
 .schedule .wrapper .main .col .cell {
-  width: 100%;
   height: 18px;
+  width: 100%;
   background: rgba(206, 234, 228, 0.7);
   margin-bottom: 2px;
 }
@@ -119,4 +119,9 @@ page {
 .schedule .wrapper .main .col .cell.selected {
   margin-bottom: 0;
   height: 20px;
+}
+
+.schedule .wrapper .main .col .cell.last {
+  margin-bottom: 2px;
+  height: 18px;
 }

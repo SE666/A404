@@ -1,8 +1,7 @@
 <!--pages/schedule/schedule.wxml-->
 <view class="header">
   <view class="strip">
-    <text class="date">当前显示日期：<text class="bold">2019</text> 年<text class="bold">10</text> 月
-<text class="bold">29</text> 日</text>
+    <text class="date">当前显示日期：<text class="bold">2019</text> 年<text class="bold">10</text> 月<text class="bold">29</text> 日</text>
     <button id="previous" size="mini">上一周</button>
     <button id="next" size="mini">下一周</button>
   </view>
@@ -43,8 +42,8 @@
       <text class="hour">22:00</text>
     </view>
     <view class="main">
-      <view class="col" wx:for="{{schedule}}" wx:for-item="itm" wx:for-index="idx" data-data="{{itm}}">
-        <view class="cell {{item}}" wx:for="{{itm}}" data-col="{{idx}}" data-row="{{index}}"></view>
+      <view class="col" wx:for="{{schedule}}" wx:for-item="itm" wx:for-index="idx">
+        <view class="cell {{item}}" wx:for="{{itm}}" data-col="{{idx}}" data-row="{{index}}" bindtap="onCellTap"></view>
       </view>
     </view>
   </view>

@@ -1,11 +1,13 @@
 // pages/schedule/schedule.js
+const utils = require('../../utils/util.js');
+var count = 0;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    schedule:[]
+    schedule: []
   },
 
   /**
@@ -13,13 +15,13 @@ Page({
    */
   onLoad: function (options) {
     var array = new Array(7);
-    for(let i = 0; i < 7; i++) {
+    for (let i = 0; i < 7; i++) {
       array[i] = new Array(30);
-      for(let j = 0; j < 30; j++) {
-        array[i][j] = "test";
+      for (let j = 0; j < 30; j++) {
+        array[i][j] = "";
       }
     }
-    this.setData({schedule: array});
+    this.setData({ schedule: array });
   },
 
   /**
@@ -69,5 +71,39 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  onCellTap: function (e) {
+    var col = e.currentTarget.dataset.col;
+    var row = e.currentTarget.dataset.row;
+    var schedule = this.data.schedule;
+    // if (count != 0) {
+    //   if (schedule[col][row + 1] != "selected" && schedule[col][row + 1] != "selected last"
+    //     && schedule[col][row - 1] != "selected" && schedule[col][row - 1] != "selected last"
+    //     && schedule[col][row] != "selected" && schedule[col][row] != "selected last") {
+    //     utils.alert("请选择连续的时间段！");
+    //     return;
+    //   }
+    // }
+    if (schedule[col][row] == "") {
+      schedule[col][row] = "selected";
+      if (schedule[col][row + 1] != "selected" && schedule[col][row + 1] != "selected last") {
+        schedule[col][row] += " last";
+      }
+      if (schedule[col][row - 1] == "selected last") {
+        schedule[col][row - 1] = "selected";
+      }
+      count++;
+    } else if (schedule[col][row] == "selected" || schedule[col][row] == "selected last") {
+      schedule[col][row] = "";
+      if (schedule[col][row - 1] == "selected") {
+        schedule[col][row - 1] += " last";
+      }
+      count--;
+    } else {
+      utils.alert("该时间段已经被占用！");
+      return;
+    }
+    this.setData({ schedule: schedule });
   }
 })
