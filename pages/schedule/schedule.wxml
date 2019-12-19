@@ -7,7 +7,7 @@
   </view>
   <view class="strip">
     <text class="selected-time">当前选择时间段：18 时 00 分 至 19 时 00 分</text>
-    <button size="mini">确定</button>
+    <button size="mini" bindtap="submit">确定</button>
   </view>
 </view>
 <view class="schedule">
