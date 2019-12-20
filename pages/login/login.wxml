@@ -19,8 +19,8 @@
     </view>
 
     <view style="display: flex;">
-      <button class="btn"   bindtap="userSubmit">确定 </button>
-      <button class="btn" bindtap="adminSubmit"> 管理员登录</button>
+      <button class="btn"   bindtap="Submit">确定 </button>
+      <button class="btn" bindtap="Submit"> 管理员登录</button>
     </view>
 
   </view>
