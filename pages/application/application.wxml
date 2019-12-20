@@ -11,7 +11,7 @@
   </view>
   <view class="form-group">
     <label>申请时间</label>
-    <text class="time">2019年10月16日 16 : 00-18 : 00</text>
+    <text class="time">2019年10月16日 {{start}}-{{end}}</text>
   </view>
   <view class="form-group">
     <label for="phone">联系电话</label>

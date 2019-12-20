@@ -7,14 +7,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    start: "00:00",
+    end: "00:00"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options);
+    this.setData({
+      start: options.start,
+      end: options.end
+    })
   },
 
   /**
@@ -73,19 +78,18 @@ Page({
     var num = e.detail.value.num;
     var media = e.detail.value.media;
     console.log(e.detail);
-    if(utils.isEmpty(UID) || utils.isEmpty(name) || utils.isEmpty(phone)
+    if (utils.isEmpty(UID) || utils.isEmpty(name) || utils.isEmpty(phone)
       || utils.isEmpty(num) || utils.isEmpty(media)) {
       utils.alert("以上信息均不能为空！");
       return false;
-    } else if (utils.isEmpty(name))
-    {
+    } else if (utils.isEmpty(name)) {
       return false;
     }
     var that = this;
     wx.request({
       url: 'http://localhost',
       data: {
-        "UID":UID,
+        "UID": UID,
         "name": name,
         "phone": phone,
         "num": num,
@@ -95,7 +99,7 @@ Page({
       success: function (res) {
         console.log(res.data);
       },
-      fail: function(res) {
+      fail: function (res) {
         console.log(res);
       }
     })

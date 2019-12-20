@@ -180,13 +180,14 @@ Page({
   submit: function(e) {
     if(count == 0) {
       utils.alert("请选择时间！");
+      return;
     }
     var start = this.data.start;
     var end = this.data.end;
     var startTime = start[0] + ":" + start[1];
     var endTime = end[0] + ":" + end[1];
     wx.navigateTo({
-      url:"/pages/application/application?start='"
+      url:"/pages/application/application?start=" + startTime + "&end=" + endTime
     })
   },
 
