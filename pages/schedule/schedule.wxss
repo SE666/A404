@@ -9,8 +9,11 @@ page {
 }
 
 .header  {
-  padding: 10px;
   text-align: center;
+}
+
+.header view:nth-child(2) {
+  margin-bottom: 5px;
 }
 
 .header .date
@@ -91,15 +94,23 @@ page {
 }
 
 .schedule .wrapper .time text {
-  height: 40px;
+  height: 44px;
   line-height: 40px;
 }
 
 .schedule .wrapper .main .col .cell {
-  height: 18px;
+  height: 20px;
   width: 100%;
   background: rgba(206, 234, 228, 0.7);
-  margin-bottom: 2px;
+  /* margin-bottom: 2px; */
+}
+
+.schedule .wrapper .main .col .cell:nth-child(odd) {
+  margin-bottom: 1.5px;
+}
+
+.schedule .wrapper .main .col .cell:nth-child(even) {
+  margin-bottom: 2.5px;
 }
 
 .schedule .wrapper .main .col .cell.occupied {
@@ -118,10 +129,32 @@ page {
 .schedule .wrapper .main .col .cell.occupied,
 .schedule .wrapper .main .col .cell.selected {
   margin-bottom: 0;
-  height: 20px;
+}
+
+.schedule .wrapper .main .col .cell.confirmed:nth-child(odd),
+.schedule .wrapper .main .col .cell.occupied:nth-child(odd),
+.schedule .wrapper .main .col .cell.selected:nth-child(odd) {
+  height: 21.5px;
+}
+
+.schedule .wrapper .main .col .cell.confirmed:nth-child(even),
+.schedule .wrapper .main .col .cell.occupied:nth-child(even),
+.schedule .wrapper .main .col .cell.selected:nth-child(even) {
+  height: 22.5px;
 }
 
 .schedule .wrapper .main .col .cell.last {
-  margin-bottom: 2px;
-  height: 18px;
+  height: 20px !important;
+}
+
+.schedule .wrapper .main .col .cell.confirmed.last:nth-child(odd),
+.schedule .wrapper .main .col .cell.occupied.last:nth-child(odd),
+.schedule .wrapper .main .col .cell.selected.last:nth-child(odd) {
+  margin-bottom: 1.5px;
+}
+
+.schedule .wrapper .main .col .cell.confirmed.last:nth-child(even),
+.schedule .wrapper .main .col .cell.occupied.last:nth-child(even),
+.schedule .wrapper .main .col .cell.selected.last:nth-child(even) {
+  margin-bottom: 2.5px;
 }
