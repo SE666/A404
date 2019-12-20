@@ -6,7 +6,7 @@ Page({
    */
   data: {
     id: " ",
-    passward: " "
+    password: " "
   },
 
   /**
@@ -27,27 +27,29 @@ Page({
 /*获取输入的密码 */
   getPassward: function(e){
     this.setData({
-      passward: e.detail.value
+      password: e.detail.value
     })
    
-    console.log("passward:" + this.data.passward)
+    console.log("password:" + this.data.password)
   },
 
+/*
   userSubmit: function(){
    var userId = this.data.id
    console.log(userId)
-   var userPwd = this.data.passward
+   var userPwd = this.data.password
    console.log(userPwd)
   },
+*/
 
-  adminSubmit: function(){
+  Submit: function(){
     var that = this;
     wx.request({
       url: 'xxxxxxxxxxxxxxx', /*提交地址？？？ */
       data: {
         /*token: '7b40b56eb2e27195dfcdcc3322312a4eb67229a000000015ea84b8657',*/
-        adminId:this.data.id,
-        adminPwd: this.data.passward
+        userid:this.data.id,
+        password: this.data.password
       },
       header: {
         'content-type': 'application/json' // 默认值

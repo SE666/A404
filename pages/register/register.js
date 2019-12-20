@@ -86,7 +86,7 @@ Page({
       wx.request({
         url: '',
         data:{
-          phoneNumber: phoneNumber
+          phonenum: phoneNumber
         },
         header:{
           "Content-Type": " ",
@@ -166,8 +166,8 @@ Page({
         url: '',
         data: {
           xuehao: xuehao,
-          name: name,
-          phoneNumber: phoneNumber,
+          username: name,
+          phonenum: phoneNumber,
           code: code,
           password: password
         },
