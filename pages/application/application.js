@@ -72,7 +72,7 @@ Page({
   },
 
   submitApplication: function (e) {
-    var UID = e.detail.value.UID;
+    var userid = e.detail.value.UID;
     var name = e.detail.value.name;
     var phone = e.detail.value.phone;
     var num = e.detail.value.num;
@@ -87,9 +87,9 @@ Page({
     }
     var that = this;
     wx.request({
-      url: 'http://localhost',
+      url: 'http://132.232.121.52/A404_Server/FormServlet?method=findById&id=1',
       data: {
-        "UID": UID,
+        "userid": userid,
         "name": name,
         "phone": phone,
         "num": num,
