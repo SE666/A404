@@ -8,7 +8,7 @@ page {
   font-weight: bold;
 }
 
-.header  {
+.header {
   text-align: center;
 }
 
@@ -16,8 +16,7 @@ page {
   margin-bottom: 5px;
 }
 
-.header .date
-,.header .selected-time {
+.header .date, .header .selected-time {
   font-size: 14px;
 }
 
@@ -48,29 +47,27 @@ page {
   align-items: flex-start;
 }
 
-.schedule .th .space
-, .schedule .wrapper .time {
+.schedule .th .space, .schedule .wrapper .time, .footer .space {
+  box-sizing: border-box;
   width: 13%;
 }
 
-.schedule .th .week
-,.schedule .wrapper .main {
+.schedule .th .week, .schedule .wrapper .main, .footer .container {
+  box-sizing: border-box;
   width: 87%;
-  padding: 0 15px 0 5px;
+  padding: 0 10px 0 5px;
 }
 
 .schedule .th .weekday {
   display: inline-block;
   width: 14.285%;
   box-sizing: border-box;
-  padding: 0 5px;
   text-align: center;
 }
 
 .schedule .th .space {
-  display: inline-block;
+  display: block;
   height: 1px;
-  margin-right: 5px;
 }
 
 .schedule .wrapper {
@@ -100,7 +97,7 @@ page {
 
 .schedule .wrapper .time text {
   height: 44px;
-  line-height: 40px;
+  line-height: 44px;
 }
 
 .schedule .wrapper .main .col .cell {
@@ -118,15 +115,18 @@ page {
   margin-bottom: 2.5px;
 }
 
-.schedule .wrapper .main .col .cell.occupied {
+.schedule .wrapper .main .col .cell.occupied,
+.footer .container .occupied {
   background: #efce92;
 }
 
-.schedule .wrapper .main .col .cell.confirmed {
+.schedule .wrapper .main .col .cell.confirmed,
+.footer .container .confirmed {
   background: #f4435c;
 }
 
-.schedule .wrapper .main .col .cell.selected {
+.schedule .wrapper .main .col .cell.selected,
+.footer .container .selected {
   background: #8ee4c5;
 }
 
@@ -163,3 +163,28 @@ page {
 .schedule .wrapper .main .col .cell.selected.last:nth-child(even) {
   margin-bottom: 2.5px;
 }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 3px;
+  font-size: 12px;
+}
+
+.footer .space {
+  height: 1px;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.footer .container .cell {
+  width: 14.285%;
+  height: 20px;
+}
+

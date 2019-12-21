@@ -1,8 +1,9 @@
 {
   "pages": [
-    "pages/schedule/schedule",
-    "pages/applyDetail/applyDetail",
     "pages/index/index",
+    "pages/schedule/schedule",
+    "pages/adminSelect/adminSelect",
+    "pages/applyDetail/applyDetail",
     "pages/applylist/applylist",
     "pages/application/application",
     "pages/register/register",
@@ -20,7 +21,7 @@
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "color": "#a9b7b7",
-    "selectedColor": "#11cd6e",
+    "selectedColor": "#333",
     "list": [
       {
         "iconPath": "image/home.png",

@@ -3,8 +3,8 @@ const utils = require('../../utils/util.js');
 var index = 0;
 var count = 0;
 var origin = null;  //原始表格数组数据
-var dateStart = null;
-var dateEnd = null;
+var dateStart = getMonDate();
+var dateEnd = getSunDate();
 
 function formatDate(dateobj) {
   var year = dateobj.getFullYear();
@@ -95,17 +95,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var start = getMonDate();
-    var end = getSunDate();
-    dateStart = start;
-    dateEnd = end;
-    this.getSchedule(start, end);
+    this.getSchedule(dateStart, dateEnd);
   },
 
   getSchedule: function (start, end) {
     var dateStart = formatDate(start);
     var dateEnd = formatDate(end);
     var that = this;
+    index = 0;
+    count = 0;
+    this.setData({
+      start: ["00", "00"],
+      end: ["00", "00"]
+    });
+    wx.showLoading({
+      title: '加载中...',
+      mask: true
+    });
     wx.request({
       url: 'http://132.232.121.52/A404_Server/FormServlet?method=schedule',
       data: {
@@ -123,8 +129,10 @@ Page({
           dateStart: dateStart,
           dateEnd: dateEnd
         });
+        wx.hideLoading();
       },
       fail: function (res) {
+        wx.hideLoading();
         console.log(res);
       }
     })

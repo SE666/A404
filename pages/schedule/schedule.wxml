@@ -53,4 +53,9 @@
 </view>
 <view class="footer">
   <view class="space"></view>
+  <view class="container">
+    <view class="cell occupied"></view>待审核
+    <view class="cell confirmed"></view>已占用
+    <view class="cell selected"></view>当前选择
+  </view>
 </view>

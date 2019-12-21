@@ -19,7 +19,7 @@
   </view>
   <view class="form-group">
     <label for="num">使用人数</label>
-    <input id="num" name="num" placeholder="请输入使用人数" placeholder-class="placeholder"></input>
+    <input id="num" name="num" type="number" placeholder="请输入使用人数" placeholder-class="placeholder"></input>
   </view>
   <view class="form-group">
     <label for="media">使用多媒体</label>

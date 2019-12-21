@@ -13,6 +13,6 @@
       {{detail.reason}}
     </view>
   </view>
-  <button id="agreeButton" style="color:white" bindtap="Pass">通过</button>
-  <button id="disagreeButton" style="color:white" bindtap="NoPass">不通过</button>
+  <button id="agreeButton" style="color:white" bindtap="changeStatus" data-status="审核通过">通过</button>
+  <button id="disagreeButton" style="color:white" bindtap="changeStatus" data-status="未通过">不通过</button>
 </view>

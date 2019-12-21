@@ -1,68 +1,65 @@
-<view >
-  
-  <!--顶部导航栏-->
-  <view class="swiper-tab">
-    <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view>
-    <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">待办申请</view>
-    <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">未还钥匙</view>
-    <view class="tab-item {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">结束办理</view>
-  </view>
-  
-  <!--内容主体-->
-  <swiper style="height:1000px" current="{{currentTab}}" duration="200" bindchange="swiperChange">
-    <swiper-item>
-      <view class = "list" wx:for = "{{all}}"> 
-        <view id = "detail" >
+<!--顶部导航栏-->
+<view class="swiper-tab">
+  <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view>
+  <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">待办申请</view>
+  <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">未还钥匙</view>
+  <view class="tab-item {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">结束办理</view>
+</view>
+
+<!--内容主体-->
+<swiper style="height:1000px" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+  <swiper-item>
+    <view class = "list" wx:for = "{{all}}"> 
+      <view id = "detail" >
+        <text space = "ensp">   提交人：</text>
+        <text style="font-size:40rpx">{{item.username}}\n</text>
+        <text space = "ensp"> 提交日期：{{item.submitdatetime}}\n</text>
+      </view>
+        <text id = "hasPermision" wx:if="{{item.status=='审核通过'}}">{{item.status}}</text>
+        <text id = "waitHandel" wx:if="{{item.status=='待审核'}}">{{item.status}}\n</text>
+        <text id = "forbidUse" wx:if="{{item.status=='未通过'}}">{{item.status}}\n</text>
+        <text id = "waitKey" wx:if="{{item.status=='未还钥匙'}}">{{item.status}}\n</text>
+        <view class='arrow' bindtap="details" data-formId="{{item.id}}"></view>
+    </view>   
+  </swiper-item>
+  <swiper-item>
+    <view wx:for="{{all}}">
+      <view class = "list" wx:if = "{{item.status == '待审核'}}">   
+        <view id = "detail">
+          <text space = "ensp">   提交人：</text>
+          <text style="font-size:40rpx">{{item.username}}\n</text>
+          <text space = "ensp"> 提交日期：{{item.submitdatetime}}\n</text>
+        </view>
+          <text id = "waitKey" wx:if="{{item.status=='待审核'}}">{{item.status}}\n</text>
+          <view class='arrow' bindtap="details"></view>
+      </view> 
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view wx:for="{{all}}">
+      <view class = "list" wx:if = "{{item.status == '未还钥匙'}}">   
+        <view id = "detail">
+          <text space = "ensp">   提交人：</text>
+          <text style="font-size:40rpx">{{item.username}}\n</text>
+          <text space = "ensp"> 提交日期：{{item.submitdatetime}}\n</text>
+        </view>
+          <text id = "waitKey" wx:if="{{item.status=='未还钥匙'}}">{{item.status}}\n</text>
+          <view class='arrow' bindtap="details"></view>
+      </view> 
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view wx:for = "{{all}}">
+      <view class = "list" wx:if="{{item.status=='审核通过' || item.status=='未通过'}}">  
+        <view id = "detail">
           <text space = "ensp">   提交人：</text>
           <text style="font-size:40rpx">{{item.username}}\n</text>
           <text space = "ensp"> 提交日期：{{item.submitdatetime}}\n</text>
         </view>
           <text id = "hasPermision" wx:if="{{item.status=='审核通过'}}">{{item.status}}\n</text>
-          <text id = "waitHandel" wx:if="{{item.status=='待审核'}}">{{item.status}}\n</text>
           <text id = "forbidUse" wx:if="{{item.status=='未通过'}}">{{item.status}}\n</text>
-          <text id = "waitKey" wx:if="{{item.status=='未还钥匙'}}">{{item.status}}\n</text>
-          <view class='arrow' bindtap="details" data-formId="{{item.id}}"></view>
-      </view>   
-    </swiper-item>
-    <swiper-item>
-     <view wx:for="{{all}}">
-        <view class = "list" wx:if = "{{item.status == '待审核'}}">   
-          <view id = "detail">
-            <text space = "ensp">   提交人：</text>
-            <text style="font-size:40rpx">{{item.username}}\n</text>
-            <text space = "ensp"> 提交日期：{{item.submitdatetime}}\n</text>
-          </view>
-            <text id = "waitKey" wx:if="{{item.status=='待审核'}}">{{item.status}}\n</text>
-            <view class='arrow' bindtap="details"></view>
-        </view> 
-      </view>
-    </swiper-item>
-    <swiper-item>
-      <view wx:for="{{all}}">
-        <view class = "list" wx:if = "{{item.status == '未还钥匙'}}">   
-          <view id = "detail">
-            <text space = "ensp">   提交人：</text>
-            <text style="font-size:40rpx">{{item.username}}\n</text>
-            <text space = "ensp"> 提交日期：{{item.submitdatetime}}\n</text>
-          </view>
-            <text id = "waitKey" wx:if="{{item.status=='未还钥匙'}}">{{item.status}}\n</text>
-            <view class='arrow' bindtap="details"></view>
-        </view> 
-      </view>
-    </swiper-item>
-    <swiper-item>
-      <view wx:for = "{{all}}">
-        <view class = "list" wx:if="{{item.status=='审核通过' || item.status=='未通过'}}">  
-          <view id = "detail">
-            <text space = "ensp">   提交人：</text>
-            <text style="font-size:40rpx">{{item.username}}\n</text>
-            <text space = "ensp"> 提交日期：{{item.submitdatetime}}\n</text>
-          </view>
-            <text id = "hasPermision" wx:if="{{item.status=='审核通过'}}">{{item.status}}\n</text>
-            <text id = "forbidUse" wx:if="{{item.status=='未通过'}}">{{item.status}}\n</text>
-            <view class='arrow' bindtap="details"></view>
-        </view> 
-      </view>  
-    </swiper-item>
-  </swiper>
-</view>
+          <view class='arrow' bindtap="details"></view>
+      </view> 
+    </view>  
+  </swiper-item>
+</swiper>

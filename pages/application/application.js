@@ -59,6 +59,11 @@ Page({
         console.log(res);
         if(res.data == "1") {
           utils.alert("提交申请成功！");
+          //刷新时刻表并跳转回时刻表
+          let pages = getCurrentPages();
+          let prevPage = pages[pages.length - 2];
+          prevPage.onLoad();
+          wx.navigateBack({})
         } else {
           utils.alert("提交申请失败！");
         }
