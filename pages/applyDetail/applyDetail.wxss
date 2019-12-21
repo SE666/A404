@@ -1,5 +1,3 @@
-/* pages/detailInfo/detailInfo.wxss */
-
 #body {
   width: 700rpx;
   height: 300px;
