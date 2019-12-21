@@ -4,6 +4,7 @@ var index = 0;
 var count = 0;
 
 function init() {
+  getMondayDate();
   var schedule = new Array(7);
   for (let i = 0; i < 7; i++) {
     schedule[i] = new Array(30);
@@ -31,6 +32,16 @@ function init() {
   }
   schedule[6][i] = "occupied last";
   return schedule;
+}
+
+/**
+ * 获取离当前日期最近的星期一的日期
+ */
+function getMondayDate() {
+  var date = new Date();
+  var day = date.getDay();
+  date.setDate(date.getDate() - day);
+  console.log(date.getDay());
 }
 
 function isSelected(cell) {

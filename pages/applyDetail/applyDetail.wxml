@@ -13,6 +13,6 @@
       {{detail[0].reason}}
     </view>
   </view>
-  <button id = "agreeButton" style="color:white"><view class= "manage"><text space="ensp">通过   </text></view></button>
-  <button id = "disagreeButton" style="color:white"><view class = "manage"><text space = "ensp">不通过    </text></view></button>
+  <button id="agreeButton" style="color:white">通过</button>
+  <button id="disagreeButton" style="color:white">不通过</button>
 </view>

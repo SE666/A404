@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/schedule/schedule",
+    "pages/applyDetail/applyDetail",
     "pages/index/index",
     "pages/applylist/applylist",
     "pages/application/application",
