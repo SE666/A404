@@ -59,7 +59,6 @@ Page({
     this.setData({
       phoneNumber: e.detail.value
     })
-    console.log(this.data.phoneNumber)
   },
 
 /*检查手机号是否正确 */
@@ -84,7 +83,7 @@ Page({
       var sessionId = wx.getStorageSync('sessionId')
       var phoneNumber = this.data.phoneNumber
       wx.request({
-        url: '',
+        url: 'http://132.232.121.52/A404_Server/AdminServlet?method=',
         data:{
           phonenum: phoneNumber
         },
@@ -160,33 +159,36 @@ Page({
     var code = this.data.code
     var password = this.data.password
     var sessionId = wx.getStorageSync('sessionId')
-    /*
+    
     if(xuehao && name && phoneNumber && code && password){
       wx.request({
-        url: '',
+        url: 'http://132.232.121.52/A404_Server/UserServlet?method=register',
         data: {
-          xuehao: xuehao,
+          stuid: xuehao,
           username: name,
-          phonenum: phoneNumber,
+          phone: phoneNumber,
           code: code,
           password: password
         },
         header:{
-          "Content-Type": "",
-          "Cookie": sessionId
+          'content-type': 'application/x-www-form-urlencoded'
+          //"Cookie": sessionId
         },
         method: "POST",
         success: function(res){
-          console.log(res)
-          if ((parseInt(res.statusCode) == 200) && res.data.message === 'pass'){
+          console.log("res:" + res.data)
+          if ((parseInt(res.statusCode) == 200) && res.data == "1"){
             wx.showToast({
-              title: '注册成功',
-              image:" "
+              title: 'success',
+            })
+            //注册成功后页面跳转
+            wx.navigateTo({
+              url: '../login/login',
             })
           }else{
             wx.showToast({
-              title: res.data.message,
-              image:" "
+              title: "res.data.message",
+              //image:" "
               
             })
           }
@@ -197,17 +199,11 @@ Page({
         }
       })
 
-    }
-    */
-    /*以下代码为测试用,上面为正式提交 */
-    if (xuehao && name && phoneNumber && code && password){
+    }else{
       wx.showToast({
-        title: '注册成功',
+        title: '注册信息错误',
+        icon: "waiting"
       })
     }
   }
-
-
-
-
 })

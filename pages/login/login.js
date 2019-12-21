@@ -1,4 +1,3 @@
-// pages/index2/index2.js
 Page({
 
   /**
@@ -20,43 +19,47 @@ Page({
     this.setData({
       id: e.detail.value
     })
-   
-    console.log("id:" + this.data.id)
-
   },
 /*获取输入的密码 */
   getPassward: function(e){
     this.setData({
       password: e.detail.value
     })
-   
-    console.log("password:" + this.data.password)
   },
-
-/*
-  userSubmit: function(){
-   var userId = this.data.id
-   console.log(userId)
-   var userPwd = this.data.password
-   console.log(userPwd)
-  },
-*/
 
   Submit: function(){
-    var that = this;
+    //var that = this;
     wx.request({
-      url: 'xxxxxxxxxxxxxxx', /*提交地址？？？ */
+      url: 'http://132.232.121.52/A404_Server/UserServlet?method=login', /*提交地址 */
       data: {
-        /*token: '7b40b56eb2e27195dfcdcc3322312a4eb67229a000000015ea84b8657',*/
-        userid:this.data.id,
+        stuid:this.data.id,
         password: this.data.password
       },
+      method:"POST",
       header: {
-        'content-type': 'application/json' // 默认值
+        'content-type': 'application/x-www-form-urlencoded'
       },
       success: function (res) {
-        that.successRemind();
-      }
+       
+       console.log(res.data)
+       console.log(res.data.flag)
+       //管理员成功登录，则跳转页面：
+       if(res.data.flag == "1"){
+         wx.navigateTo({
+           url: '../register/register',
+         })
+       }else if(res.data.flag == "0"){
+         wx.navigateTo({
+           url: '../index/index',
+         })
+       }else{wx.showToast({
+           title: '登录失败',
+           //icon: fail,
+         })
+       }
+       
+      },
+      fail: function(res) {}
     })
    
   }
