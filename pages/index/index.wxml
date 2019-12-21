@@ -1,13 +1,13 @@
 <!--pages/index/index.wxml-->
 <view class="wrapper">
-  <view class="condition">
+  <view class="condition" bindtap="condition">
     会议室使用情况
   </view>
   <view class="right">
-    <view class="apply">
+    <view class="apply" bindtap="apply">
       A404会议室预约
     </view>
-    <view class="my">
+    <view class="my" bindtap="my">
       查看已提交申请
     </view>  
   </view>
