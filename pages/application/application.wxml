@@ -2,20 +2,20 @@
 <image class="top-img" src="/image/bg.png" mode="widthFix"></image>
 <form class="application-form" bindsubmit="submitApplication">
   <view class="form-group">
-    <label for="UID">申请人学号</label>
-    <input id="UID" name="UID" placeholder="请输入申请人学号" placeholder-class="placeholder"></input>
+    <label for="userid">申请人学号</label>
+    <input id="userid" name="userid" placeholder="请输入申请人学号" placeholder-class="placeholder" value="17020031052" disabled="{{true}}"></input>
   </view>
   <view class="form-group">
     <label for="name">申请人姓名</label>
-    <input id="name" name="name" placeholder="请输入申请人姓名" placeholder-class="placeholder"></input>
+    <input id="name" name="name" placeholder="请输入申请人姓名" placeholder-class="placeholder" value="曲少伟" disabled="{{true}}"></input>
   </view>
   <view class="form-group">
     <label>申请时间</label>
-    <text class="time">2019年10月16日 {{start}}-{{end}}</text>
+    <text class="time">{{date}} {{start}}-{{end}}</text>
   </view>
   <view class="form-group">
     <label for="phone">联系电话</label>
-    <input id="phone" name="phone" placeholder="请输入联系电话" placeholder-class="placeholder"></input>
+    <input id="phone" name="phone" placeholder="请输入联系电话" placeholder-class="placeholder" value="17852410085" disabled="{{true}}"></input>
   </view>
   <view class="form-group">
     <label for="num">使用人数</label>
@@ -33,7 +33,7 @@
     <textarea id="reason" name="reason"></textarea>
   </view>
   <view class="btn-group">
-    <button form-type="reset">取消</button>
+    <button>取消</button>
     <button form-type="submit">提交</button>
   </view>
 </form>

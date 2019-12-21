@@ -22,7 +22,7 @@ page {
 }
 
 .header .date .bold {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .header button {
@@ -34,6 +34,11 @@ page {
   background: #ddbb93;
   box-shadow: 1px 1px 1px #000;
   border-radius: 2px;
+}
+
+.header button[disabled] {
+  background: #ddbb93;
+  color: #777 !important;
 }
 
 .schedule .th {

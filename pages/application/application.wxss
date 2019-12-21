@@ -39,7 +39,7 @@ image.top-img {
 
 .form-group .time {
   color: #404241;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .form-group radio-group radio {
