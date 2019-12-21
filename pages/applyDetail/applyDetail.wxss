@@ -1,0 +1,82 @@
+/* pages/detailInfo/detailInfo.wxss */
+#body{
+  width: 700rpx;
+  height: 300px;
+  /* display: flex;
+  flex-direction: column; */
+  /* box-shadow:0px 1px 1px 1px ; */
+  background-color: #eee;
+  position: absolute;
+  top: 100px;
+  left: 25rpx;
+}
+#content{
+  position: relative;
+  top: 30px;
+}
+#reason{
+  height: 100px;
+  width:350rpx;
+  /* border: 1px solid red; */
+  position:relative;
+  left: 242rpx;  
+  top: 10px;
+}
+#agreeButton{
+  width: 150rpx;
+  height: 30px;
+  line-height: 20px;
+  background-color: #00a0b4;
+  justify-content: center;
+  font-size: 15px;
+  text-align: center;
+  /* right: px; */
+  margin: 0px;
+  position: absolute;
+  right: 420rpx;
+  bottom: 280rpx;
+}
+#disagreeButton{
+  width: 150rpx;
+  height: 30px;
+  line-height: 20px;
+  background-color: #00a0b4;
+  justify-content: center;
+  font-size: 15px;
+  text-align: center;
+  /* right: px; */
+  margin: 0px;
+  position: absolute;
+  right: 170rpx;
+  bottom: 280rpx;
+}
+#agreeButton text{
+  vertical-align:center;
+  display: table-cell;
+  font-weight: normal;
+  text-align: center;
+}
+#disagreeButton text{
+ vertical-align:middle;
+  display: table-cell;
+  font-weight: normal;
+}
+#main{
+ width: 750rpx;
+  height: 100%x;
+  background-color: #f7f7f2;
+  margin: 0px;
+  padding: 0px;
+}
+.manage{
+   width: 150rpx;
+  height: 30px;
+text-align: center;
+  font-size: 15px;
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+

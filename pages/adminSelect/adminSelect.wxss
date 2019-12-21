@@ -1,0 +1,97 @@
+/* .page {
+  margin-left: 0rpx;
+  margin-right: 0rpx;
+} */
+  
+.swiper-tab {
+  display: flex;
+  flex-direction: row;
+  line-height: 80rpx;
+  border-bottom: 2rpx solid #777;
+}
+  
+.tab-item {
+  width: 25%;
+  text-align: center;
+  font-size: 15px;
+  color: #000;
+  font-weight: bold;
+}
+  
+.swiper {
+  height: 1000px;
+  background: #f8f7f2;
+}
+  
+.on {
+  color: #00a3b0;
+  border-bottom: 5rpx solid #00a3b0;
+}
+.list{
+width: 750rpx;
+height: 120rpx;
+font-size: 14px;
+font-weight: normal;
+background-color:#fff;
+margin: 0 auto;
+margin-top:3px;
+margin-bottom: 10rpx;
+position: relative;
+border-bottom: solid black 1px;
+}
+.parentList{
+  width: 750rpx;
+/* height: 120rpx; */
+}
+
+/*已通过0*/
+#hasPermision{
+  font-size:50rpx; 
+  color: #c5e266;
+  font-weight: normal;
+  position: absolute;
+  right: 40px;
+  bottom: 10rpx;
+}
+/*待审核1*/
+#waitHandel{
+  font-size:50rpx; 
+  color: #f0ca4a;
+  font-weight: normal;
+  position: absolute;
+  right: 40px;
+  bottom: 10rpx;
+}
+/*未通过2*/
+#forbidUse{ 
+  font-size:50rpx; 
+  color: #fe395f;
+  font-weight: normal;
+  position: absolute;
+  right: 40px;
+  bottom: 10rpx;
+}
+/*未还钥匙3*/
+#waitKey{
+  font-size:50rpx; 
+  color: #69eaac;
+  font-weight: normal;
+  position: absolute;
+  right: 40px;
+  bottom: 10rpx;
+}
+#detail{
+position:absolute;
+top: 10rpx;
+}
+.arrow{ 
+width: 10px;
+height: 10px;
+border-top: 2px solid #999;
+border-right: 2px solid #999;
+position: absolute;
+bottom: 28rpx;
+right: 30rpx;
+transform: rotate(45deg); 
+margin-top:10rpx;
+}

@@ -1,0 +1,18 @@
+<view id = "main">
+  <view id = "body">
+    <view id = "content">
+      <text space="ensp">   申请人学号：{{detail[0].stuid}}\n</text>
+      <text space="ensp">   申请人姓名：{{detail[0].username}}\n</text>
+      <text space="ensp"> 申请使用时间：{{detail[0].applydate}} {{detail[0].start}}-{{detail[0].end}}\n</text>
+      <text space="ensp">     联系电话：{{detail[0].phone}}\n</text>
+      <text space="ensp">     使用人数：{{detail[0].number}}\n</text>
+      <text space="ensp">   使用多媒体：{{detail[0].ifmedia}}\n</text>
+      <text space="ensp">     申请理由：</text>
+    </view>
+    <view id = "reason">
+      {{detail[0].reason}}
+    </view>
+  </view>
+  <button id = "agreeButton" style="color:white"><view class= "manage"><text space="ensp">通过   </text></view></button>
+  <button id = "disagreeButton" style="color:white"><view class = "manage"><text space = "ensp">不通过    </text></view></button>
+</view>
