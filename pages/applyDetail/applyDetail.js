@@ -5,9 +5,9 @@ Page({
     formId: 0
   },
 
-  onLoad: function(options) {
+  onLoad: function (options) {
     var formId = options.formId;
-    this.setData({formId:formId});
+    this.setData({ formId: formId });
     var that = this;
     wx.request({
       url: 'http://132.232.121.52/A404_Server/AdminServlet?method=ShowForm',
@@ -17,7 +17,7 @@ Page({
       header: {
         'content-type': 'application/x-www-form-urlencoded' //传统POST方式
       },
-      success: function(res) {
+      success: function (res) {
         that.setData({
           detail: res.data
         });
@@ -25,7 +25,7 @@ Page({
     })
   },
 
-  changeStatus: function(e) {
+  changeStatus: function (e) {
     var formId = this.data.formId;
     var status = e.currentTarget.dataset.status;
     wx.request({
@@ -37,7 +37,7 @@ Page({
       header: {
         'content-type': 'application/x-www-form-urlencoded' //传统POST方式
       },
-      success: function(res) {
+      success: function (res) {
         wx.showToast({
           title: '成功',
           icon: 'success',

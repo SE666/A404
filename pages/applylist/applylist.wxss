@@ -58,6 +58,7 @@ position: relative;
   width: 120rpx;
   height: 40rpx;
   line-height: 20px;
+  color: white;
   background-color: #00a0b4;
   justify-content: center;
   font-size: 15px;

@@ -6,6 +6,25 @@ Page({
   data: {
     applylist: []
   },
+  CancelApplication:function(e){
+    var that = this;
+    var formId = e.currentTarget.dataset.formid;
+    wx.request({
+      url: 'http://132.232.121.52/A404_Server/FormServlet?method=delete',
+      data:{
+        id:formId
+      },
+      success:function(){
+        wx.showToast({
+          title: '成功',
+          icon: 'success',
+          duration: 2000
+        }),
+      that.onLoad();
+      }
+    })
+    console.log("hello");
+  },
   onLoad: function () {
     var that = this;
     wx.showLoading({
@@ -15,9 +34,9 @@ Page({
     wx.request({
       url: 'http://132.232.121.52/A404_Server/FormServlet?method=findByUserid',
       data: {
-        userid:1
+        userid: 1
       },
-      method:'POST',
+      method: 'POST',
       header: {
         'content-type': 'application/x-www-form-urlencoded' //传统POST方式
       },

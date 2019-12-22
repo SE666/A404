@@ -8,6 +8,7 @@ Page({
   },
   details: function (e) {
     var formId = e.currentTarget.dataset.formid;
+    console.log(formId);
     wx.navigateTo({
       url: "/pages/applyDetail/applyDetail?formId=" + formId
     });
@@ -27,7 +28,7 @@ Page({
       currentTab: e.detail.current,
     })
   },
-  onShow:function(e){
+  onShow: function (e) {
     var that = this;
     wx.showLoading({
       title: '加载中...',
@@ -42,6 +43,7 @@ Page({
         that.setData({
           all: res.data
         });
+        console.log(res.data);
         wx.hideLoading();
       }
     })
