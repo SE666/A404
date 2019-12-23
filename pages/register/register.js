@@ -107,7 +107,7 @@ Page({
     }else{
         wx.showToast({
         title: '手机号不正确',
-        image: '/pages/image/login-bg.png'
+        icon: "none"
       })
     }
     
@@ -182,8 +182,8 @@ Page({
               title: 'success',
             })
             //注册成功后页面跳转
-            wx.navigateTo({
-              url: '../login/login',
+            wx.reLaunch({
+              url: '/pages/login/login',
             })
           }else{
             wx.showToast({

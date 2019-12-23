@@ -55,6 +55,7 @@ margin-bottom: 10rpx;
 position: relative;
 }
 #cancel{
+  color: white;
   width: 120rpx;
   height: 40rpx;
   line-height: 20px;

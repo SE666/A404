@@ -1,15 +1,15 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/schedule/schedule",
-    "pages/adminSelect/adminSelect",
-    "pages/applyDetail/applyDetail",
-    "pages/applylist/applylist",
-    "pages/application/application",
-    "pages/register/register",
-    "pages/login/login",
     "pages/rule/rule",
+    "pages/adminSelect/adminSelect",
+    "pages/index/index",
+    "pages/register/register",
+    "pages/schedule/schedule",
+    "pages/application/application",
+    "pages/login/login",
+    "pages/applyDetail/applyDetail",
     "pages/personalcenter/personalcenter",
+    "pages/applylist/applylist",
     "pages/logs/logs"
   ],
   "window": {

@@ -19,10 +19,12 @@ image.top-img {
 }
 
 .form-group button{
+  color: #fff;
   background-color: #00a0b4;
   width:170rpx;
   height:60rpx;
   font-size:28rpx;
+  line-height: 60rpx;
   padding:0;
   margin-right:50rpx;
   border-radius: 5rpx;
@@ -75,6 +77,7 @@ textarea#reason {
 }
 
 .btn-group button{
+  color: #fff;
   background-color: #00a0b4;
   font-size: 30rpx;
   margin-top:50rpx;

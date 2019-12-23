@@ -15,7 +15,7 @@ Page({
     wx.request({
       url: 'http://132.232.121.52/A404_Server/FormServlet?method=findByUserid',
       data: {
-        userid:1
+        userid:5
       },
       method:'POST',
       header: {

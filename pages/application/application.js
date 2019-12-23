@@ -43,7 +43,7 @@ Page({
     wx.request({
       url: 'http://132.232.121.52/A404_Server/FormServlet?method=submit',
       data: {
-        "userid": 1,
+        "userid": 5,
         "applydate": that.data.date,
         "start": that.data.start,
         "end": that.data.end,

@@ -3,14 +3,14 @@
     <view id = "content">
       <text space="ensp">   申请人学号：{{detail.stuid}}\n</text>
       <text space="ensp">   申请人姓名：{{detail.username}}\n</text>
-      <text space="ensp"> 申请使用时间：{{detail.applydate}} {{detail[0].start}}-{{detail[0].end}}\n</text>
+      <text space="ensp"> 申请使用时间：{{detail.applydate}} {{detail.start}}-{{detail.end}}\n</text>
       <text space="ensp">     联系电话：{{detail.phone}}\n</text>
       <text space="ensp">     使用人数：{{detail.number}}\n</text>
       <text space="ensp">   使用多媒体：{{detail.ifmedia}}\n</text>
       <text space="ensp">     申请理由：</text>
     </view>
     <view id = "reason">
-      {{detail.reason}}
+    {{detail.reason}}
     </view>
   </view>
   <button id="agreeButton" style="color:white" bindtap="changeStatus" data-status="审核通过">通过</button>
