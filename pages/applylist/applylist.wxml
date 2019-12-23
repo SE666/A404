@@ -15,7 +15,7 @@
     <text space="ensp"> 申请使用：{{item.applydate}} {{item.start}}-{{item.end}}\n</text>
     <text space="ensp">   状态：{{item.status}}\n</text>
     <text space="ensp"> 提交日期：{{item.submitdatetime}}</text>
-    <button id="cancel">
+    <button id="cancel" bindtap="CancelApplication" data-formId="{{item.id}}">
       <text>撤销</text>
     </button>
   </view>
